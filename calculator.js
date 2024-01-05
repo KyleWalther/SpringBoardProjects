@@ -17,7 +17,7 @@ return {
 }
 
 function setupIntialValues() {
-const values  = { amount: 10000, years: 10, rate: 4.5 };
+const values  = { amount: 5000, years: 10, rate: 5 };
 const amountUI = document.getElementById("loan-amount");
 amountUI.value = values.amount;
 const yearsUI = document.getElementById("loan-years");
