@@ -1,12 +1,16 @@
-const form = document.getElementById("calc-form");
-if (form) {
-  setupIntialValues();
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    update();
-  });
-}
-;
+
+
+
+window.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById("calc-form");
+  if (form) {
+    setupIntialValues();
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      update();
+    });
+  }
+});
 
 function getCurrentUIValues() {
 return {
@@ -35,10 +39,11 @@ updateMonthly(calculateMonthlyPayment(currentUIValues));
 function calculateMonthlyPayment(values) {
 const monthlyRate = (values.rate / 100) / 12;
 const n = Math.floor(values.years * 12);
-return (
-  (monthlyRate * values.amount) /
-  (1 - Math.pow((1 + monthlyRate), -n))
-).toFixed(2);
+
+const result = (monthlyRate * values.amount) /
+    (1 - Math.pow((1 + monthlyRate), -n));
+  
+  return isNaN(result) ? NaN : result.toFixed(2);
 }
 
 function updateMonthly(monthly) {
