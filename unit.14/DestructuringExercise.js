@@ -43,8 +43,15 @@ const {a,b} = obj
 
 
 // raceResults
-// const raceResultNames = (['Kyle','Behliu','Mike','Jesse','Tom'])
+const raceResultNames = (['Kyle','Behliu','Mike','Jesse','Tom'])
 const raceResults = ([first,second,third,...rest]) => ({first, second, third, rest})
+// what the object would look like
+const final = {
+    first: 'Kyle',
+    second: 'Behliu',
+    third: 'Mike',
+    rest: ['Jesse','Tom']
+ }
 
 
 
