@@ -37,7 +37,7 @@ satisfaction_survey = Survey(
         Question("Are you likely to shop here again?"),
     ])
 
-second_question = satisfaction_survey.questions[1]
+
 
 
 

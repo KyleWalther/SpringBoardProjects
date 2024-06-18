@@ -4,6 +4,8 @@ from surveys import satisfaction_survey as survey
 
 
 RESPONSES_KEY = "responses"
+# this is the ky that will keep track of all the users responses
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "never-tell!"
@@ -15,6 +17,7 @@ def show_survey_start():
     """Select a survey."""
 
     return render_template("survey_start.html", survey=survey)
+# this is the starting page for the survey, it is linked tot he template "survey_start.html", the survey object is thne passed as a varible named survey. This allows the survey to be accessed by the html allowing it to display information about the survey like the title instructions and other information
 
 
 @app.route("/begin", methods=["POST"])

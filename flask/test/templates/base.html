@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/app.css">
+    <title>base template</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/form">Greet</a>
+        <a href="/form-2">Greet V2</a>
+        <a href="/lucky">Lucky</a>
+        <a href="/hello">Hello</a>
+        <a href="/goodbye">Goodbye</a>
+    </nav>
+
+
+    <main id="content">
+        <section class="messages">
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+            <p class="{{ category }}">{{ message }}</p>
+            {% endfor %}
+        </section>
+        {% block content %} {% endblock %}
+    </main>
+
+
+  
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
