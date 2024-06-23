@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit {{ post.title }}</title>
+    <title>Edit Post</title>
 </head>
 <body>
-    <h1>Edit {{ post.title }}</h1>
-    <form action="/posts/{{ post.id }}/edit" method="POST">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" value="{{ post.title }}" required>
-        <br>
-        <label for="content">Content:</label>
-        <textarea id="content" name="content" required>{{ post.content }}</textarea>
-        <br>
-        <button type="submit">Update Post</button>
+    <h1>Edit Post</h1>
+    <form method="POST" action="/posts/{{ post.id }}/edit">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" value="{{ post.title }}" required><br><br>
+
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" rows="5" required>{{ post.content }}</textarea><br><br>
+
+        <label for="tags">Tags:</label><br>
+        {% for tag in tags %}
+            <input type="checkbox" name="tags" value="{{ tag.name }}"
+            {% if tag in post.tags %} checked {% endif %}> {{ tag.name }}<br>
+        {% endfor %}<br>
+
+        <input type="submit" value="Save">
     </form>
-    <br><br>
-    <a href="/posts/{{ post.id }}"><button>Back to Post</button></a>
 </body>
 </html>
 
