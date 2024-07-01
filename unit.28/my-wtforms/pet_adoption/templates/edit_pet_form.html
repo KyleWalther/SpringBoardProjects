@@ -9,10 +9,12 @@
     <title>Edit Pet</title>
 </head>
 <body>
+    
     <h1>Edit Pet: {{ pet.pet_name }}</h1>
     <form action="" method="POST">
         {{ form.hidden_tag() }}
-        {% for field in form if field.type != 'HiddenField' %}
+        
+        {% for field in form if field.widget.input_type != 'hidden' %}
         <div>
             {{ field.label }}
             {{ field() }}
