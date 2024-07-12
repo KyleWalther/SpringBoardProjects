@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1>{{ playlist.name }}!</h1>
+  {% if playlist.description %}
+  <p class="lead">{{ playlist.description }}</p>
+  {% endif %}
+</div>
+
+<div class="text-danger">
+  <h2>All Songs in Playlist</h2>
+  <ul>
+    {% for ps in playlist.songs %}
+      <li>{{ ps.song.title }} by {{ ps.song.artist }}</li>
+    {% endfor %}
+  </ul>
+  <a class="btn btn-primary" href="{{ url_for('add_song_to_playlist', playlist_id=playlist.id) }}">Add Song to Playlist</a>
+  <a class="btn btn-primary" href="{{ url_for('show_all_playlists') }}">Back to Playlists</a>
+</div>
+{% endblock %}

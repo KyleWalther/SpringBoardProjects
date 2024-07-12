@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Add Song to Playlist</h1>
+<h2>{{ playlist.name }}</h2>
+<form method="POST">
+  {{ form.hidden_tag() }}
+
+  <div class="form-group">
+    {{ form.song.label }}
+    {{ form.song(class="form-control") }}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Song</button>
+</form>
+
+<a class="btn btn-secondary" href="{{ url_for('show_playlist', playlist_id=playlist.id) }}">Back to Playlist</a>
+{% endblock %}

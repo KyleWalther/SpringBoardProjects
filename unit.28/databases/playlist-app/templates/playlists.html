@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Playlists</h1>
+  <ul>
+    {% for playlist in playlists %}
+      <li><a href="{{ url_for('show_playlist', playlist_id=playlist.id) }}">{{ playlist.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <a class="btn btn-primary" href="{{ url_for('add_playlist') }}">Add Playlist</a>
+{% endblock %}
