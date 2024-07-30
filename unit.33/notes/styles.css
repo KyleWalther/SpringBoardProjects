@@ -16,8 +16,9 @@ body {
 #draw-card {
     padding: 10px 20px;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     cursor: pointer;
+    margin-right: 60px;
 }
 
 .cards-container {
@@ -33,13 +34,10 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100px;
     height: 150px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
     padding: 10px;
+    margin: 0 auto;
 }
