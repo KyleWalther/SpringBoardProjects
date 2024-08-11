@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.first_name }} {{ user.last_name }}</title>
+</head>
+<body>
+    <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+    <img src="{{ user.image_url }}" alt="Image of {{ user.first_name }} {{ user.last_name }}">
+    <br>
+    <a href="/user/{{ user.id }}/edit"><button>Edit</button></a>
+    <form action="/user/{{ user.id }}/delete" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+    </form>
+    <br>
+
+    <h2>Posts</h2>
+    <ul>
+        {% for post in user.posts %}
+            <li><a href="/posts/{{ post.id }}">{{ post.title }}</a>
+                - <a href="/posts/{{ post.id }}/edit">Edit</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/users/{{ user.id }}/post_form/new"><button>Add Post</button></a>
+    <br><br>
+    <a href="/"><button>Back to Home</button></a>
+</body>
+</html>

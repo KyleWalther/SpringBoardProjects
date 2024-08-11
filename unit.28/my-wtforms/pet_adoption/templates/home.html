@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <title>Pet Adoption Homepage</title>
+    <style>
+        .pet-card {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Pets Available For Adoption!</h1>
+    <div class="row">
+        {% for pet in pets %}
+        <div class="col-md-4">
+            <div class="card pet-card">
+                <img class="card-img-top" src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ pet.pet_name }}</h5>
+                    <p class="card-text">Species: {{ pet.pet_species }}</p>
+                    <p class="card-text">Age: {{ pet.pet_age }}</p>
+                    <p class="card-text">Available: {% if pet.pet_available %}Yes{% else %}No{% endif %}</p>
+                    <a href="{{ url_for('pet_details', pet_id=pet.id) }}" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('add_pet_form') }}" class="btn btn-success mt-3">Add Pet</a>
+</div>
+</body>
+</html>

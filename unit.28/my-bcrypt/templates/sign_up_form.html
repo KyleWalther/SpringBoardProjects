@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up Page{% endblock %}
+
+{% block content %}
+
+<h1>Sign Up Form</h1>
+
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+
+    {% for field in form 
+        if field.widget.input_type != 'hidden' %}
+        <p>
+            {{field.label}}
+            {{field(class_="form-control")}}
+
+            {% for error in field.errors %}
+            <span class="form-text text-danger">{{ error }}</span>
+            {% endfor %}
+        </p>
+        {% endfor %}
+
+        <a href='/secret'><button class="btn btn-success" type="submit" value="Register">Submit</button></a>
+
+</form>
+
+
+
+
+{% endblock %}

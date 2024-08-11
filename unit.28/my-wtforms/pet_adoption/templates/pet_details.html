@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pet.pet_name }} Details</title>
+</head>
+<body>
+    
+<h1>{{ pet.pet_name }} Details</h1>
+<div>
+    <img src="{{ pet.pet_photo }}" alt="photo of {{ pet.pet_name }}" style="width:200px;">
+    <p>Species: {{ pet.pet_species }}</p>
+    <p>Age: {{ pet.pet_age }}</p>
+    <p>Notes: {{ pet.pet_notes }}</p>
+    <p>Available: {{ pet.pet_available }}</p>
+</div>
+<a href="{{ url_for('edit_pet', pet_id=pet.id) }}"><button>Edit</button></a>
+<a href="{{ url_for('home_page') }}"><button>Back to Home</button></a>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Form {% endblock %}
+{% block content %}
+    <form action="/greet" method="GET">
+        <input type="text" placeholder="your name" name="username">
+        <button type="submit">Submit</button>
+    </form>
+    {% endblock %}

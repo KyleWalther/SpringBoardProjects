@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+<body>
+
+    <h1>Edit User</h1>
+    <form action="/user/{{ user.id }}/edit" method="POST">
+        <input type="text" name="first_name" placeholder="First name" value="{{ user.first_name }}" required>
+        <input type="text" name="last_name" placeholder="Last name" value="{{ user.last_name }}" required>
+        <input type="text" name="image_url" placeholder="Image URL" value="{{ user.image_url }}">
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <a href="/user/{{ user.id }}"><button>Cancel</button></a>
+
+</body>
+</html>
+
+
+
+
+

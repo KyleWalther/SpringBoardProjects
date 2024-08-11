@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ survey.title }}</h1>
+<!-- this displays the survey title form the already made instance of the Survey class -->
+<p>
+  {{ survey.instructions }}
+  <!-- this displays the survey instrucitons from the preeexisting instance of Survey -->
+</p>
+
+<form action="/begin" method="POST">
+  <button>Start!</button>
+</form>
+{% endblock %}

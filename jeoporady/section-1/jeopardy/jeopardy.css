@@ -1,0 +1,100 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Copse', serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Heading styling */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #505152;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #80858a;
+}
+
+button.disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+/* Loading spinner styling */
+#loading-spinner {
+  font-size: 1.5rem;
+  color: #464647;
+  margin-top: 20px;
+}
+
+
+/* Table styling */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  table-layout: fixed; /* Fix table layout */
+}
+
+/* Header cells */
+thead th {
+  background-color: #4c4c4c;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 150px; /* Fixed width for columns */
+}
+
+/* Body cells */
+tbody td {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 150px; /* Fixed width for columns */
+  height: 100px; /* Fixed height for rows */
+  text-align: center; /* Center align text */
+  vertical-align: middle; /* Vertically center text */
+
+}
+
+/* Font Awesome icon styling */
+.fas {
+  color: #000000;
+}
+
+
+
+/* Spinner container */
+#spin-container {
+  display: none;
+  margin: 20px auto;
+}
+
+#spin-container p {
+  font-size: 1.5rem;
+  color: #007bff;
+}

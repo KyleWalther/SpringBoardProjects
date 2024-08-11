@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    place-items: center;
+    
+}
+
+.display-box {
+    margin-top: 30px;
+    padding: 10px;
+    border: solid black 3px;
+    width: 450px;
+    max-width: 450px;
+}
+
+h2 {
+    display: grid;
+    place-items: center;
+}
+
+.add-button{
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(233, 214, 154);
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.add-button:active{
+    width: 105px;
+    height: 52px;
+    background-color: rgb(221, 193, 100);
+}
+
+.add-button:hover{
+    cursor: pointer;
+}
+
+
+.btn-input{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    max-width: max-content;
+    margin:auto;
+}
+
+input{
+    height: 20px;
+    width: 250px;
+    max-width: 180px;
+    margin-top: 20px;
+    border: solid black 3px;
+}
+
+.removebutton{
+    margin-left: 6px;
+    width: 15px;
+    height: 15px;
+    padding: 0%;
+    background-color: white;
+    border: solid 1px rgb(78, 4, 4);
+    color: red;
+    cursor: pointer;
+}
+
+
+li {
+    padding: 5px;
+}
+
+
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor List</title>
+</head>
+<body>
+    <h1>List of Sponsors</h1>
+    <ul>
+        {% for sponsor in sponsors %}
+            <li><a href="/sponsor/{{ sponsor.id }}">{{ sponsor.name }}</a></li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/add_sponsor"><button>Add New Sponsor</button></a>
+    <a href="/"><button>Back to Sport List</button></a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Sport Form</title>
+</head>
+<body>
+
+    <h1>Add a Sport to our list</h1>
+    <form action="/add_sport" method="POST">
+        <input type="text" name="sport_name" placeholder="Sport Name" required>
+        <input type="number" name="sport_popularity" placeholder="Sport Popularity from 0 - 100" required>
+        <button type="submit">Add Sport</button>
+    </form>
+    
+    <a href="/"><button>Back to Sport List</button></a>
+</body>
+</html>

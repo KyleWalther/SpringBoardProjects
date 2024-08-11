@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Cool People Page{% endblock %}
+
+{% block content %}
+<ul>
+    <h3>{{ Kyle.name }}</h3>
+    <li>Party: {{ Kyle.party }}</li>
+    <li>Smart: {{ Kyle.smart }}</li>
+    <li>Funny: {{ Kyle.funny }}</li>
+    <li>Fast: {{ Kyle.fast }}</li>
+</ul>
+<ul>
+    <h3>{{ Shawn.name }}</h3>
+    <li>Party: {{ Shawn.party }}</li>
+    <li>Smart: {{ Shawn.smart }}</li>
+    <li>Funny: {{ Shawn.funny }}</li>
+    <li>Fast: {{ Shawn.fast }}</li>
+</ul>
+{% endblock %}
+
+

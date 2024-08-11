@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} Game Page {% endblock %}
+{% block content %}
+
+<h1>Boggle Board</h1>
+<table>
+    {% for row in board %}
+    <tr>
+        {% for char in row %}
+        <td>{{ char }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<form action="/submit-form" methods="POST" id="word-form">
+
+    <input id="word-input" type="text" name="word" value="" placeholder="Make a word">
+
+    <button type="submit" id="submit-button">Submit</button>
+
+
+
+</form>
+<div id="result"></div>
+<br>
+<div id="container">
+    <div id="word-length"></div>
+    <div id="timer"></div>
+    <div id="total-score"></div>
+
+</div>
+<p id="time-text">TIME LEFT</p>
+<h2 id="game-over-message"></h2>
+{% endblock %}
