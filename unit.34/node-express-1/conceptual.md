@@ -34,4 +34,4 @@ async function getUsers() {
   return [elie, matt, joel];
 }
 ```
-some issues would ne the await keyword making each request execute sequtially, mkaing one statr and end before going ot the next. The hardcoded usernames not allowing for dynamic searches of other usernames. making usernames a paramater would be better. There is no error handeling either.   10101 
+some issues would ne the await keyword making each request execute sequtially, mkaing one statr and end before going ot the next. The hardcoded usernames not allowing for dynamic searches of other usernames. making usernames a paramater would be better. There is no error handeling either.  
