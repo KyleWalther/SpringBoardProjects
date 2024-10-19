@@ -1,0 +1,21 @@
+i started the app and began to play arounf with the features that are pre providwed
+i noticed the styling for the text 'Snack or Booze' would change to black after clicking on the snacks link on the home page within the nav bar
+this made it impossible to see as the navbar was alos black
+i found the class associated with the text and changed it to default to white and added a grey hover effect
+I did the same thing to the snack text, the li items were defaulting to black making them hard to see on the black backgorund of the menu list containor
+
+starting on the building of the app, i went ahead and started by adding the number of food items and drink items (i planned to add) to the home page of the site
+
+I then moved on to adding the 'Drink' link to the nav bar
+
+started on the generic menu and and item components, added drinks and changed food to use the generic componnets as well, added the api request in the API file
+
+made the form to add new items for either food or drinks, and the option to select within the nav bar and added it to the app.js file along with the post requests. Added a css file for the form to change the text color
+
+i also added a back button to the item dexcription sections so you can go back after reading the info
+
+
+
+
+
+
