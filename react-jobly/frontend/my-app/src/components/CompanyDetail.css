@@ -1,0 +1,48 @@
+/* src/components/CompanyDetail.css */
+
+.CompanyDetail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.CompanyDetail-header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.CompanyDetail-header h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.CompanyDetail-header p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.CompanyDetail h3 {
+  font-size: 1.8em;
+  margin-top: 20px;
+  color: #1a499a
+}
+
+.CompanyDetail-jobs {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr; /* Two columns for job cards */
+  padding: 20px 0;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+  .CompanyDetail-jobs {
+    grid-template-columns: 1fr; /* One column on smaller screens */
+  }
+}

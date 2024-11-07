@@ -1,0 +1,20 @@
+
+
+.Jobs {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.Jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Jobs h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
